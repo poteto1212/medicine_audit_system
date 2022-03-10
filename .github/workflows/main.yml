@@ -25,6 +25,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: test gradlew build
         run: |
+          docker-compose build
           docker-compose up -d
           docker-compose exec java bash -c "cd home/medicine_audit_system/ && ./gradlew build "
 
