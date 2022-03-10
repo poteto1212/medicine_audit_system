@@ -26,7 +26,7 @@ jobs:
       - name: test gradlew build
         run: |
           docker-compose build
-          docker-compose up -d
+          docker-compose up -d java
           docker-compose exec java bash -c "cd home/medicine_audit_system/ && ./gradlew build "
 
       # Runs a set of commands using the runners shell
