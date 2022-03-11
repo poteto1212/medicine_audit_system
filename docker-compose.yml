@@ -8,6 +8,8 @@ services:
       - 8080:8080
     volumes:
       - .:/home
+    env_file:
+      - .env
   db:
     build: 
       context: .
