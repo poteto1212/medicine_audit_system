@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.medicine_audit_system.response.Greeting;
 @RestController
 @CrossOrigin
+@RequestMapping("/api/v1")
 public class GreetingController {
     private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
