@@ -25,6 +25,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: test docker build java
         run: |
+          cp test.env .env
           docker-compose up -d java
       - name: test gradlew build
         run: |
