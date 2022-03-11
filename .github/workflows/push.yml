@@ -28,7 +28,7 @@ jobs:
           docker-compose exec -T java java -jar home/medicine_audit_system/build/libs/run.jar &
       - name: test server run
         run: |
-          curl -f localhost:8080/greeting
+          curl -f localhost:8080/api/v1/greeting
 
 
       # Runs a set of commands using the runners shell
