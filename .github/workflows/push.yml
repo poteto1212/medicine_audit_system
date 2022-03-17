@@ -23,6 +23,7 @@ jobs:
         run: |
           cp test.env .env
           docker-compose up -d java
+          docker-compose up -d db
       - name: test gradlew build
         run: |
           docker-compose exec -T java bash -c "cd home/medicine_audit_system/ && ./gradlew build "
