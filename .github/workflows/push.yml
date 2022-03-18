@@ -26,7 +26,8 @@ jobs:
       - name: test gradlew build
         run: |
           docker-compose exec -T java bash -c "cd home/medicine_audit_system/ && ./gradlew build "
-          docker-compose exec -T java java -jar home/medicine_audit_system/build/libs/run.jar &
+      - name: run server
+        run: docker-compose exec -T java java -jar home/medicine_audit_system/build/libs/run.jar &
       - name: test server run
         run: |
           docker ps
