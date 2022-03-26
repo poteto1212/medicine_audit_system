@@ -10,7 +10,7 @@ services:
       - .:/home
     env_file:
       - .env
-  db:
+  db: #TODO　初期開発用に作ってただけ依存関係の移行次第消す
     build: 
       context: .
       dockerfile: ./development/postgresql/Dockerfile
@@ -22,7 +22,6 @@ services:
       POSTGRES_PASSWORD: 'Makt0112'
     volumes:
       - ./develop_db:/docker-entrypoint-initdb.d
-  
   mariadb:
     image: mariadb
     ports:
