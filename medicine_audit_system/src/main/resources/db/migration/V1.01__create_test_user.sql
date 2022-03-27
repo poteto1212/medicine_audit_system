@@ -1,0 +1,7 @@
+CREATE TABLE Testuser
+(
+id INTEGER NOT NULL,
+first_name VARCHAR(10) NOT NULL,
+last_name VARCHAR(10) NOT NULL,
+PRIMARY KEY(id)
+);
