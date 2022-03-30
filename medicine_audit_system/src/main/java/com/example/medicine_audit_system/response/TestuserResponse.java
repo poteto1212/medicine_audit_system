@@ -10,7 +10,7 @@ public class TestuserResponse {
    }
 
    public String getResponse(){
-       String full_name = full_name_record.full_name();
+       String full_name = full_name_record.fullname;
        return full_name;
    }
 }
