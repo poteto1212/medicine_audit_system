@@ -10,16 +10,25 @@ services:
       - .:/home
     env_file:
       - .env
-  db:
-    build: 
-      context: .
-      dockerfile: ./development/postgresql/Dockerfile
-    container_name: medicine_audit_development
+  mariadb:
+    image: mariadb
     ports:
-     - 5432:5432
-    environment:
-      POSTGRES_USER: 'medicine_audit_development'
-      POSTGRES_PASSWORD: 'Makt0112'
+      - 3306:3306
     volumes:
-      - ./develop_db:/docker-entrypoint-initdb.d
-  
+      - "./development/mariadb:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=medicine_audit_development
+      - MYSQL_USER=poteto1212
+      - MYSQL_PASSWORD=Makt0112
+  mariadb_test: #テスト用のDBコンテナ
+    image: mariadb
+    ports:
+      - 3307:3306
+    volumes:
+      - "./development/mariadb_test:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=medicine_audit_development_test
+      - MYSQL_USER=poteto1212
+      - MYSQL_PASSWORD=Makt0112

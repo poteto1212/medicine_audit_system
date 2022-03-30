@@ -1,2 +1,4 @@
 ###.env_file
 .env
+/development/mariadb
+/development/mariadb_test
