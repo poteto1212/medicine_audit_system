@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 @Entity
-@Table(name= "Testuser")
+@Table(name= "testuser")
 public class Testuser {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -18,25 +18,27 @@ public class Testuser {
     @Column(name= "last_name")
     private String last_name;
 
-    public Integer getId(){
+    public int getId(){
         return id;
     }
     
-    public void setKey(Integer id){
+    public void setKey(int id){
         this.id = id;
     }
 
-    public String getFullName(){
-        return last_name + first_name;
+    public String getFirstName(){
+        return first_name;
     }
 
     public void SetFirstName(String first_name){
         this.first_name = first_name;
     }
 
+    public String getLastName(){
+        return last_name;
+    }
+
     public void SetLastName(String last_name){
         this.last_name = last_name;
     }
-
-
 }
