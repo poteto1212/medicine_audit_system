@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.medicine_audit_system.response.Greeting;
 import com.example.medicine_audit_system.response.TestuserResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.medicine_audit_system.service.TestuserService;
 import com.example.medicine_audit_system.logics.TestuserLogic;
 import com.example.medicine_audit_system.record.FullNameRecord;
 @RestController
@@ -18,8 +17,7 @@ import com.example.medicine_audit_system.record.FullNameRecord;
 public class GreetingController {
     private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
-    @Autowired
-	TestuserService testuserService;
+
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name),"makoto");
