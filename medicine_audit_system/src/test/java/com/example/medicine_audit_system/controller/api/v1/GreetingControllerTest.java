@@ -23,7 +23,7 @@ public class GreetingControllerTest {
     }
 
     @Test
-    public void test() throws Exception{
+    public void サーバーが正常に起動することのテスト() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/greeting"))
         .andExpect(MockMvcResultMatchers.status().isOk());
 
