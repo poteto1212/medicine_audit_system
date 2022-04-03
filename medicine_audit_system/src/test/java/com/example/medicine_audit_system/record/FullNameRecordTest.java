@@ -1,6 +1,5 @@
-package com.example.medicine_audit_system.controller.record;
+package com.example.medicine_audit_system.record;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import com.example.medicine_audit_system.record.FullNameRecord;
 import org.junit.jupiter.api.Test;
 
 public class FullNameRecordTest {
