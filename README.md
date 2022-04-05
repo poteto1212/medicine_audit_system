@@ -8,3 +8,6 @@ javaによる持参薬監査システムの開発
 - バックエンド　Spring Boot
 - データベース　MySQL(Conoha wingのプラグインを使用予定)
 - フロントエンド　Next.js　TypeScript (後日フロントリポジトリも作成予定)
+
+# アプリケーションのリンクはこちら(開発中)
+https://mkpoteto.com/greeting
