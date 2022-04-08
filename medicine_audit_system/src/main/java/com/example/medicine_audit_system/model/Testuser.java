@@ -22,7 +22,7 @@ public class Testuser {
         return id;
     }
     
-    public void setKey(int id){
+    public void setId(int id){
         this.id = id;
     }
 
