@@ -49,7 +49,7 @@ public class TestuserRepositoryTest{
 
     @DatabaseSetup(value = DATA_FILE_PATH)
 
-    @Test
+    // @Test
     public void ユーザーIDを渡すと該当ユーザーのエンティティが帰る(){
 
         Testuser testuserentity = new Testuser();
