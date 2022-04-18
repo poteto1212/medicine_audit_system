@@ -25,6 +25,7 @@ jobs:
           docker-compose up -d 
       - name: test db setup
         run: |
+          docker-compose exec -T java bash -c "cd home/medicine_audit_system/ && ./gradlew flywayMigrate -Dflyway.configFiles=/home/medicine_audit_system/src/test/resources/application-test.properties"
           docker-compose exec -T java bash -c "cd home/medicine_audit_system/ && ./gradlew flywayInfo -Dflyway.configFiles=/home/medicine_audit_system/src/test/resources/application-test.properties"
       - name: test gradlew build
         run: |
