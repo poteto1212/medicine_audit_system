@@ -1,4 +1,11 @@
 ###.env_file
 .env
+
+###vscode
+.vscode/settings.json
+.vscode/launch.json
+
+###データベース関連
 /development/mariadb
 /development/mariadb_test
+/development/postgresql
