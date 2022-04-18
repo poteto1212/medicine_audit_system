@@ -3,6 +3,7 @@
 
 ###vscode
 .vscode/settings.json
+.vscode/launch.json
 
 ###データベース関連
 /development/mariadb

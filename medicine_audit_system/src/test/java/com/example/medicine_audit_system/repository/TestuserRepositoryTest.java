@@ -3,7 +3,7 @@ import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.github.springtestdbunit.annotation.DbUnitConfiguration;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -41,15 +41,8 @@ public class TestuserRepositoryTest{
 
     @Test
     public void ユーザーIDを渡すと該当ユーザーのエンティティが帰る(){
-        
-        Testuser testuserentity = new Testuser();
-        testuserentity.setId(1);
-        testuserentity.SetFirstName("たろう");
-        testuserentity.SetLastName("テスト");
-        List<Testuser> testusers = testuserRepository.select_user_name(1);
-        System.out.println("デヴァイス");
-        System.out.println(testusers.get(0).getFirstName());
-        assertEquals(testusers.get(0).getFirstName() ,"たろう");
+        List<Testuser> testusers = testuserRepository.select_user_name(2);
+        assertEquals(testusers.get(0).getFirstName() ,"テスト嫌いな");
  
     }
 
